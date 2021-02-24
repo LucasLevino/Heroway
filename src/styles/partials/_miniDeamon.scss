@@ -1,0 +1,48 @@
+.mini-demon {
+  
+  width: $tile-size;
+  height: $tile-size + $helmet-offset;
+  
+  z-index: 1;
+  position: absolute;
+  
+  background-image: url('../../assets/imgs/mini-demon.png');
+  background-repeat: no-repeat;
+  animation: miniDemonAnimation 1s steps(4) infinite;
+
+  // ? Negative value
+  transform: translateY( -1 * $helmet-offset );
+  background-position: 0 (-1 * $tile-size + $helmet-offset);
+}
+
+
+.mini-demon1 {
+
+  top: 612px;
+  left: 336px;
+  
+}
+
+.mini-demon2 {
+
+  top: 180px;
+  left: 384px;
+
+}
+
+
+@keyframes miniDemonAnimation {
+
+  from {
+
+    background-position-x: 0;
+
+  }
+
+  to {
+
+    background-position-x: -192px;
+
+  }
+
+}

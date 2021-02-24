@@ -1,0 +1,42 @@
+.hero {
+
+  width: $tile-size;
+  height: $tile-size + $helmet-offset;
+
+  position: absolute;
+  z-index: 1;
+
+  background-image: url('../../assets/imgs/hero.png');
+  background-repeat: no-repeat;
+  animation: heroAnimation 1s steps(4) infinite;
+
+  // ? Negative value
+  transform: translateY( -1 * $helmet-offset);
+  background-position: 0 (-1 * $tile-size + $helmet-offset);
+
+}
+
+.hero1 {
+
+  top: 804px;
+  left: 48px;
+
+}
+
+
+@keyframes heroAnimation {
+
+  from {
+
+    background-position-x: 0;
+
+  }
+
+  to {
+
+    background-position-x: -192px;
+
+  }
+
+}
+

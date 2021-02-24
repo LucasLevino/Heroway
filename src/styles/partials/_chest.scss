@@ -1,0 +1,44 @@
+.chest {
+
+  width: $tile-size;
+  height: $tile-size;
+  position: absolute;
+
+  background-image: url('../../assets/imgs/chest.png');
+  background-repeat: no-repeat;
+  background-position: 0px 0px;
+
+  /* animation: chest-animation 1s steps(2) forwards; */
+
+}
+
+
+.chest1 {
+
+  top: 672px;
+  left: 816px;
+
+}
+
+.chest2 {
+
+  top: 240px;
+  left: 144px;
+
+}
+
+@keyframes chest-animation {
+
+  from {
+
+    background-position-x: 0;
+
+  }
+
+  to {
+
+    background-position-x: -96px;
+
+  }
+
+}

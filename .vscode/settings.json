@@ -1,0 +1,7 @@
+{
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+    "explorer.compactFolders": false,
+    "editor.fontFamily": "Fira Code",
+    "editor.fontLigatures": true,     
+    "editor.formatOnSave": false,
+}

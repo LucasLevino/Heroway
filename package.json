@@ -1,0 +1,11 @@
+{
+    "name": "heroway",
+    "version": "1.0.0",
+    "description": "A JS Game",
+    "author": "Lucas Levino <lucas@moveeup.com>",
+    "license": "ISC",
+    "dependencies": {},
+    "devDependencies": {
+        "eslint": "^7.19.0"
+    }
+}

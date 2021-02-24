@@ -1,0 +1,247 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  overflow: auto;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.app {
+  min-width: 100vw;
+  min-height: 100vh;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #282c34;
+}
+
+.board {
+  width: 960px;
+  height: 960px;
+  position: relative;
+}
+
+.board-img {
+  width: 960px;
+  height: 960px;
+}
+
+.controls {
+  top: 0;
+  left: 0;
+  margin-top: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.steps {
+  padding-right: 10px;
+  border-right: 2px solid white;
+  font-size: 25px;
+  color: #ffffff;
+}
+
+.reset {
+  cursor: pointer;
+  margin-left: 10px;
+  border: none;
+  font-size: 25px;
+  color: #ffffff;
+  background: transparent;
+}
+
+.chest {
+  width: 48px;
+  height: 48px;
+  position: absolute;
+  background-image: url("../../assets/imgs/chest.png");
+  background-repeat: no-repeat;
+  background-position: 0px 0px;
+  /* animation: chest-animation 1s steps(2) forwards; */
+}
+
+.chest1 {
+  top: 672px;
+  left: 816px;
+}
+
+.chest2 {
+  top: 240px;
+  left: 144px;
+}
+
+@-webkit-keyframes chest-animation {
+  from {
+    background-position-x: 0;
+  }
+  to {
+    background-position-x: -96px;
+  }
+}
+
+@keyframes chest-animation {
+  from {
+    background-position-x: 0;
+  }
+  to {
+    background-position-x: -96px;
+  }
+}
+
+.forniture {
+  width: 48px;
+  height: 48px;
+  position: absolute;
+}
+
+.hero {
+  width: 48px;
+  height: 60px;
+  position: absolute;
+  z-index: 1;
+  background-image: url("../../assets/imgs/hero.png");
+  background-repeat: no-repeat;
+  -webkit-animation: heroAnimation 1s steps(4) infinite;
+          animation: heroAnimation 1s steps(4) infinite;
+  -webkit-transform: translateY(-12px);
+          transform: translateY(-12px);
+  background-position: 0 -36px;
+}
+
+.hero1 {
+  top: 804px;
+  left: 48px;
+}
+
+@-webkit-keyframes heroAnimation {
+  from {
+    background-position-x: 0;
+  }
+  to {
+    background-position-x: -192px;
+  }
+}
+
+@keyframes heroAnimation {
+  from {
+    background-position-x: 0;
+  }
+  to {
+    background-position-x: -192px;
+  }
+}
+
+.mini-demon {
+  width: 48px;
+  height: 60px;
+  z-index: 1;
+  position: absolute;
+  background-image: url("../../assets/imgs/mini-demon.png");
+  background-repeat: no-repeat;
+  -webkit-animation: miniDemonAnimation 1s steps(4) infinite;
+          animation: miniDemonAnimation 1s steps(4) infinite;
+  -webkit-transform: translateY(-12px);
+          transform: translateY(-12px);
+  background-position: 0 -36px;
+}
+
+.mini-demon1 {
+  top: 612px;
+  left: 336px;
+}
+
+.mini-demon2 {
+  top: 180px;
+  left: 384px;
+}
+
+@-webkit-keyframes miniDemonAnimation {
+  from {
+    background-position-x: 0;
+  }
+  to {
+    background-position-x: -192px;
+  }
+}
+
+@keyframes miniDemonAnimation {
+  from {
+    background-position-x: 0;
+  }
+  to {
+    background-position-x: -192px;
+  }
+}
+
+.trap {
+  width: 48px;
+  height: 48px;
+  position: absolute;
+  background-image: url("../../assets/imgs/trap.png");
+  background-repeat: no-repeat;
+  background-position: 0px 0px;
+  -webkit-animation: trapAnimation 1s steps(8) infinite;
+          animation: trapAnimation 1s steps(8) infinite;
+}
+
+.trap1 {
+  top: 672px;
+  left: 336px;
+}
+
+.trap2 {
+  top: 720px;
+  left: 624px;
+}
+
+.trap3 {
+  top: 576px;
+  left: 768px;
+}
+
+.trap4 {
+  top: 384px;
+  left: 384px;
+}
+
+.trap5 {
+  top: 288px;
+  left: 480px;
+}
+
+@-webkit-keyframes trapAnimation {
+  from {
+    background-position-x: 0;
+  }
+  to {
+    background-position-x: -384px;
+  }
+}
+
+@keyframes trapAnimation {
+  from {
+    background-position-x: 0;
+  }
+  to {
+    background-position-x: -384px;
+  }
+}
+/*# sourceMappingURL=styles.css.map */

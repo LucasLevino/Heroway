@@ -1,0 +1,53 @@
+.board {
+
+  width: $game-size;
+  height: $game-size;
+
+  position: relative;
+
+}
+
+
+.board-img {
+
+  width: $game-size;
+  height: $game-size;
+
+}
+
+.controls {
+
+  top: 0;
+  left: 0;
+
+  margin-top: 5px;
+
+  display: flex;
+  position: absolute;
+  align-items: center;
+
+}
+
+.steps {
+
+  padding-right: 10px;
+  border-right: $color-border-white;
+
+  font-size: 25px;
+  color: $color-white;
+
+}
+
+.reset {
+
+  cursor: pointer;
+  
+  margin-left: 10px;
+  border: none;
+  
+  font-size: 25px;
+  color: $color-white;
+
+  background: transparent;
+
+}
