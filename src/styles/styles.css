@@ -10,10 +10,17 @@ html {
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
+ 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+/* :root {
+  --tile-size: 48px;
+  --game-size: calc(var(--tile-size) * 20);
+  --helmet-offset: 12px;
+} */
 
 .app {
   min-width: 100vw;
@@ -29,14 +36,14 @@ body {
 }
 
 .board {
-  width: 960px;
-  height: 960px;
+  width: var(--game-size);
+  height: var(--game-size);
   position: relative;
 }
 
 .board-img {
-  width: 960px;
-  height: 960px;
+  width: var(--game-size);
+  height: var(--game-size);
 }
 
 .controls {
@@ -69,10 +76,10 @@ body {
 }
 
 .chest {
-  width: 48px;
-  height: 48px;
+  width: var(--tile-size);
+  height: var(--tile-size);
   position: absolute;
-  background-image: url("../../assets/imgs/chest.png");
+  background-image: url("../assets/imgs/chest.png");
   background-repeat: no-repeat;
   background-position: 0px 0px;
   /* animation: chest-animation 1s steps(2) forwards; */
@@ -107,23 +114,23 @@ body {
 }
 
 .forniture {
-  width: 48px;
-  height: 48px;
+  width: var(--tile-size);
+  height: var(--tile-size);
   position: absolute;
 }
 
 .hero {
-  width: 48px;
-  height: 60px;
+  width: var(--tile-size);
+  height: calc(var(--tile-size) + var(--helmet-offset));
   position: absolute;
   z-index: 1;
-  background-image: url("../../assets/imgs/hero.png");
+  background-image: url("../assets/imgs/hero.png");
   background-repeat: no-repeat;
   -webkit-animation: heroAnimation 1s steps(4) infinite;
           animation: heroAnimation 1s steps(4) infinite;
-  -webkit-transform: translateY(-12px);
-          transform: translateY(-12px);
-  background-position: 0 -36px;
+  -webkit-transform: translateY(calc(-1 * var(--helmet-offset)));
+          transform: translateY(calc(-1 * var(--helmet-offset)));
+  background-position: 0 calc(-1 * var(--tile-size) + var(--helmet-offset));
 }
 
 .hero1 {
@@ -150,17 +157,18 @@ body {
 }
 
 .mini-demon {
-  width: 48px;
-  height: 60px;
+  width: var(--tile-size);
+  height: calc(var(--tile-size) + var(--helmet-offset));
   z-index: 1;
   position: absolute;
-  background-image: url("../../assets/imgs/mini-demon.png");
+  background-image: url("../assets/imgs/mini-demon.png");
   background-repeat: no-repeat;
   -webkit-animation: miniDemonAnimation 1s steps(4) infinite;
           animation: miniDemonAnimation 1s steps(4) infinite;
-  -webkit-transform: translateY(-12px);
-          transform: translateY(-12px);
-  background-position: 0 -36px;
+  /* hack valor negativo */
+  -webkit-transform: translateY(calc(-1 * var(--helmet-offset)));
+          transform: translateY(calc(-1 * var(--helmet-offset)));
+  background-position: 0 calc(-1 * var(--tile-size) + var(--helmet-offset));
 }
 
 .mini-demon1 {
@@ -192,10 +200,10 @@ body {
 }
 
 .trap {
-  width: 48px;
-  height: 48px;
+  width: var(--tile-size);
+  height: var(--tile-size);
   position: absolute;
-  background-image: url("../../assets/imgs/trap.png");
+  background-image: url("../assets/imgs/trap.png");
   background-repeat: no-repeat;
   background-position: 0px 0px;
   -webkit-animation: trapAnimation 1s steps(8) infinite;

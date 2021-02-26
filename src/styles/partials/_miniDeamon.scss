@@ -6,11 +6,11 @@
   z-index: 1;
   position: absolute;
   
-  background-image: url('../../assets/imgs/mini-demon.png');
+  background-image: url('../assets/imgs/mini-demon.png');
   background-repeat: no-repeat;
   animation: miniDemonAnimation 1s steps(4) infinite;
 
-  // ? Negative value
+  /* hack valor negativo */
   transform: translateY( -1 * $helmet-offset );
   background-position: 0 (-1 * $tile-size + $helmet-offset);
 }

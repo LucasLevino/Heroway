@@ -1,10 +1,10 @@
 .chest {
 
-  width: $tile-size;
-  height: $tile-size;
+  width: var(--tile-size);
+  height: var(--tile-size);
   position: absolute;
 
-  background-image: url('../../assets/imgs/chest.png');
+  background-image: url('../assets/imgs/chest.png');
   background-repeat: no-repeat;
   background-position: 0px 0px;
 

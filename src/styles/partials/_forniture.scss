@@ -1,7 +1,7 @@
 .forniture {
 
-  width: $tile-size;
-  height: $tile-size;
+  width: var(--tile-size);
+  height: var(--tile-size);
 
   position: absolute;
 

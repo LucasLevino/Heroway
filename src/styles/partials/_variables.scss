@@ -1,3 +1,11 @@
+:root {
+
+    --tile-size: 48px;
+    --game-size: calc(var(--tile-size) * 20); 
+    --helmet-offset: 12px;
+
+}
+
 // Tag: Game Components
 
 $tile-size: 48px;

@@ -1,7 +1,7 @@
 .board {
 
-  width: $game-size;
-  height: $game-size;
+  width: var(--game-size);
+  height: var(--game-size);
 
   position: relative;
 
@@ -10,8 +10,8 @@
 
 .board-img {
 
-  width: $game-size;
-  height: $game-size;
+  width: var(--game-size);
+  height: var(--game-size);
 
 }
 
