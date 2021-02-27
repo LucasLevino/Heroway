@@ -78,8 +78,25 @@ function createBoard() {
 			}
 
 			function validateConflits(cEl, conflictItem) {
+
+				function finishGame(message) {
+
+					setTimeout(() => {
+
+						alert(message);
+						location.reload();
+
+					}, 100)
+				
+				}
 			
 				if(cEl.item === 'hero') {
+
+					if (!conflictItem) {
+					
+						return;
+					
+					}
 				
 					if (
 
@@ -88,8 +105,20 @@ function createBoard() {
 
 					) {
 					
-						console.log('************')
+						finishGame(' *** Game Over! *** ');
 
+					}
+
+					if (conflictItem.item === 'chest') {
+					
+						finishGame(' *** Win! *** ');
+
+					}
+
+					if (cEl.item === 'mini-demon' && cEl.item === 'hero') {
+					
+						finishGame(' *** Game Over! *** ')
+					
 					}
 
 				} 
@@ -182,11 +211,29 @@ function createBoard() {
 const board = createBoard();
 // Reminder: item -> mini-deamon | chest | hero | trap 
 // Reminder: { item: 'item', top: Y(number), left: X(number) } 
-board.createEnemy({ top: tile_size * 15, left: tile_size * 15 });
 board.createHero({ top: tile_size * 16, left: tile_size * 2 });
+board.createEnemy({ top: tile_size * 15, left: tile_size * 15 });
+board.createEnemy({ top: tile_size * 15, left: tile_size * 15 });
+board.createEnemy({ top: tile_size * 15, left: tile_size * 15 });
+board.createEnemy({ top: tile_size * 15, left: tile_size * 15 });
+board.createEnemy({ top: tile_size * 15, left: tile_size * 15 });
+board.createEnemy({ top: tile_size * 10, left: tile_size * 10 });
+board.createEnemy({ top: tile_size * 10, left: tile_size * 10 });
+board.createEnemy({ top: tile_size * 10, left: tile_size * 10 });
+board.createEnemy({ top: tile_size * 5, left: tile_size * 10 });
+board.createEnemy({ top: tile_size * 5, left: tile_size * 10 });
+board.createEnemy({ top: tile_size * 5, left: tile_size * 10 });
+board.createEnemy({ top: tile_size * 5, left: tile_size * 10 });
+board.createEnemy({ top: tile_size * 4, left: tile_size * 4 });
+board.createEnemy({ top: tile_size * 4, left: tile_size * 4 });
+board.createEnemy({ top: tile_size * 4, left: tile_size * 4 });
+board.createEnemy({ top: tile_size * 4, left: tile_size * 4 });
+board.createEnemy({ top: tile_size * 4, left: tile_size * 15 });
+board.createEnemy({ top: tile_size * 4, left: tile_size * 15 });
+board.createEnemy({ top: tile_size * 4, left: tile_size * 15 });
 
 board.createItem({ item: 'trap', top: tile_size * 15, left: tile_size * 16 });
-board.createItem({ item: 'chest', top: tile_size * 15, left: tile_size * 17 });
+board.createItem({ item: 'chest', top: tile_size * 2, left: tile_size * 18 });
 
 board.createItem({ item: 'forniture', top: tile_size * 17, left: tile_size * 2 });
 board.createItem({ item: 'forniture', top: tile_size * 2, left: tile_size * 8 });
